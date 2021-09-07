@@ -1,0 +1,93 @@
+#%RAML 1.0 DataType
+type: object
+properties:
+	
+    Id:
+        displayName: Identifier
+        description: Primary Key
+        type: string
+        required: true
+	
+    CountryId:
+        displayName: Country Id
+        description: Reference to the Country the State is part of E.g. ID for Indonesia
+        type: string
+        required: true
+	
+    ParentCountrySubdivisionId:
+        displayName: Parent Country Subdivision
+        description: Country subdivisions can optionally exist in a hierarchy
+        type: string
+        required: false
+	
+    CountrySubdivisionTypeId:
+        displayName: Country Subdivision Type
+        description: Various ways a country subdivision may be further classified state/province, county,  or county region.
+        type: string
+        required: true
+	
+    ISO3166SubdivisionCd:
+        displayName: ISO 3166 Subdivision Code
+        description: Code based on the two-letter code element from ISO 3166-1 followed by a separator and up to three alphanumeric characters. For example ID-RI is the Riau province of Indonesia and NG-RI is the Rivers province in Nigeria.
+        type: string
+        required: false
+	
+    Name:
+        displayName: Name
+        description: Non-translated name of a country subregion e.g., Riau
+        type: string
+        required: true
+	
+    CombinedKey:
+        displayName: Combined Key
+        description: Derived by combining multiple unique attributes from current record and parent entities
+        type: string
+        required: false
+	
+    ImplementerType:
+        displayName: Implementer Type
+        description: Entity Interfaces may have implementers other than the default implementation. Provides a way to specify which implementation, for example when an Insert operation should only be performed on one of several substrates that implement the EI.
+        type: string
+        required: false
+	
+    ExternalRecordId:
+        displayName: External Record Id
+        description: Corresponding record Id from external data source system
+        type: string
+        required: false
+	
+    ExternalSystemName:
+        displayName: External System Name
+        description: Name of the system where the External Record Id exists
+        type: string
+        required: false
+	
+    CreatedDate:
+        displayName: Created Date
+        description: Date and time when this record was created
+        type: datetime-only
+        required: true
+	
+    CreatedByUserId:
+        displayName: Created By User Id 
+        description: User who created the record
+        type: string
+        required: true
+	
+    LastModifiedDate:
+        displayName: Last Modified Date
+        description: Date and time when a user last modified this record
+        type: datetime-only
+        required: true
+	
+    LastModifiedById:
+        displayName: Last Modified By Id
+        description: User who most recently changed the record
+        type: string
+        required: true
+	
+    SystemModstamp:
+        displayName: System Modified Stamp
+        description: Date and time when this record was last modified by a user or by an automated process
+        type: datetime-only
+        required: true

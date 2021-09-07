@@ -1,0 +1,69 @@
+#%RAML 1.0 DataType
+type: object
+properties:
+	
+    Id:
+        displayName: Country Id
+        description: Primary Key
+        type: string
+        required: true
+	
+    Alpha2Cd:
+        displayName: Alpha 2 Code
+        description: ISO3166-1 value. E.g., NZ. A two-letter code that represents a country name, recommended as the general purpose code
+        type: string
+        required: true
+	
+    Alpha3Cd:
+        displayName: Alpha 3 Code
+        description: ISO3166-1 value. E.g., NZL. A three-letter code that represents a country name, which is usually more closely related to the country name
+        type: string
+        required: true
+	
+    NumericCd:
+        displayName: Numeric Code
+        description: ISO3166-1 value. E.g., 554 for New Zealand
+        type: string
+        required: true
+	
+    IsIndependent:
+        displayName: Is Independent
+        description: ISO3166-1. Yes or No
+        type: string
+        required: true
+	
+    Alpha4Cd:
+        displayName: Alpha 4 Code
+        description: ISO3166-3. A four-letter code that represents a country name that is no longer in use. The structure depends on the reason why the country name was removed from ISO 3166-1 and added to ISO 3166-3.
+        type: string
+        required: false
+	
+    InternetTopLevelDomainCd:
+        displayName: Internet Top Level Domain Code
+        description: The country code top-level domain (ccTLD) e.g., .nz for New Zealand
+        type: string
+        required: false
+	
+    GENCURName:
+        displayName: GENC URN
+        description: Geopolitical Entities, Names, and Codes (GENC) Uniform Resource Number (URN) from dni.gov
+        type: string
+        required: false
+	
+    ContinentId:
+        displayName: Continent
+        description: Reference to the continent the country is part of
+        type: string
+        required: true
+	
+    ContinentRegionId:
+        displayName: Continent Region
+        description: A zone of the Earth that may or may not be a political entity. Examples include Souteast Asia, and European Union.
+        type: string
+        required: false
+	
+    CapitalName:
+        displayName: Capital Name
+        description: Name of the captial in the country e.g., Stockholm in Sweden
+        type: string
+        required: false

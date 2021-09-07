@@ -1,0 +1,69 @@
+#%RAML 1.0 DataType
+type: object
+properties:
+	
+    Id:
+        displayName: Data Source Identifier
+        description: Primary Key
+        type: string
+        required: true
+	
+    Name:
+        displayName: Data Source Nature Name
+        description: What type of source did the data come from e.g., Country provided, Estimated, Global Monitoring, Modeled
+        type: string
+        required: true
+	
+    Description:
+        displayName: Description
+        description: Description of the decease
+        type: string
+        required: false
+	
+    ImplementerType:
+        displayName: Implementer Type
+        description: Entity Interfaces may have implementers other than the default implementation. Provides a way to specify which implementation, for example when an Insert operation should only be performed on one of several substrates that implement the EI.
+        type: string
+        required: false
+	
+    ExternalRecordId:
+        displayName: External Record Id
+        description: Corresponding record Id from external data source system
+        type: string
+        required: false
+	
+    ExternalSystemName:
+        displayName: External System Name
+        description: Name of the system where the External Record Id exists
+        type: string
+        required: false
+	
+    CreatedDate:
+        displayName: Created Date
+        description: Date and time when this record was created
+        type: datetime-only
+        required: true
+	
+    CreatedByUserId:
+        displayName: Created By User Id 
+        description: User who created the record
+        type: string
+        required: true
+	
+    LastModifiedDate:
+        displayName: Last Modified Date
+        description: Date and time when a user last modified this record
+        type: datetime-only
+        required: true
+	
+    LastModifiedById:
+        displayName: Last Modified By Id
+        description: User who most recently changed the record
+        type: string
+        required: true
+	
+    SystemModstamp:
+        displayName: System Modified Stamp
+        description: Date and time when this record was last modified by a user or by an automated process
+        type: datetime-only
+        required: true

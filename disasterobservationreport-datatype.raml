@@ -1,0 +1,423 @@
+#%RAML 1.0 DataType
+type: object
+properties:
+	
+    Id:
+        displayName: Disaster Observation Report Id
+        description: Primary Key
+        type: string
+        required: true
+	
+    AccountId:
+        displayName: Account Id
+        description: Reference to the account e.g., organization that reported the observation
+        type: string
+        required: true
+	
+    ReportedDateTm:
+        displayName: Reported Date Time
+        description: ISO 8601 date of the time the data was last submitted
+        type: datetime-only
+        required: true
+	
+    ReportDt:
+        displayName: Report Date
+        description: What date does the conent of the report cover
+        type: string
+        required: true
+	
+    DisasterAreaId:
+        displayName: Disaster Area Id
+        description: Reference to the area the observation is reported for
+        type: string
+        required: true
+	
+    ContinentId:
+        displayName: Continent Id
+        description: Reference to continent the disaster is taken place in
+        type: string
+        required: false
+	
+    ContinentRegionId:
+        displayName: Continent Region Id
+        description: Reference to continent region the disatesr is taken place in e.g, east asia
+        type: string
+        required: false
+	
+    CountryId:
+        displayName: Country Id
+        description: Reference to country the disaster is taken place in
+        type: string
+        required: false
+	
+    CountrySubdivisionId:
+        displayName: Country Subdivision Id
+        description: Reference to country subdivision the disaster is taken place in
+        type: string
+        required: false
+	
+    ProvinceStateId:
+        displayName: Province State Id
+        description: Reference to province state the sdisater is taken place in
+        type: string
+        required: false
+	
+    CountyId:
+        displayName: County Id
+        description: Reference to county the disaster is taken place in
+        type: string
+        required: false
+	
+    CountyRegionId:
+        displayName: County Region Id
+        description: Reference to county region the disater is taken place ins
+        type: string
+        required: false
+	
+    CountySubregionId:
+        displayName: County Subregion Id
+        description: Reference to  county subregion the disaster is taken place in
+        type: string
+        required: false
+	
+    MarketAreaId:
+        displayName: Market Area Id
+        description: Reference to market area the disaster is taken place in
+        type: string
+        required: false
+	
+    ReportedHighlightsTxt:
+        displayName: Reported Highlights Text
+        description: Overview in text of current state
+        type: string
+        required: true
+	
+    GeneralAdviceTxt:
+        displayName: GeneralAdvice Text
+        description: E.g., WHO may advice to stay at home
+        type: string
+        required: false
+	
+    ShelterInPlaceAdviceText:
+        displayName: Shelter In Place Advice Text
+        description: Details around shelter in place advice
+        type: string
+        required: false
+	
+    SocialDistancingAdviceText:
+        displayName: Social Distancing Advice Text
+        description: Details around social distancing advice
+        type: string
+        required: false
+	
+    PeoplePositiveCasesCt:
+        displayName: People Positive Cases Count
+        description: How many people tested positive for all times
+        type: number
+        required: false
+	
+    PeoplePositiveNewCasesCt:
+        displayName: People Positive New Cases Count
+        description: How many people tested postive since last report
+        type: number
+        required: false
+	
+    PeopleNegativeCasesCt:
+        displayName: People Negative Cases Count
+        description: How many people tested negative
+        type: number
+        required: false
+	
+    PeoplePendingCasesCt:
+        displayName: People Pending Cases Count
+        description: How many people tested with results pending
+        type: number
+        required: false
+	
+    PeopleTestResultCt:
+        displayName: People Test Result Count
+        description: Derived Postive+Negative test results
+        type: number
+        required: false
+	
+    PeopleTestedCt:
+        displayName: People Tested Count
+        description: Derived Postive+Negative+Pending test results
+        type: number
+        required: false
+	
+    PeopleRecoveredCt:
+        displayName: People Recovered Count
+        description: How many people have recovered
+        type: number
+        required: false
+	
+    PeopleDeathCt:
+        displayName: People Death Count
+        description: How many people perished due to disease
+        type: number
+        required: false
+	
+    PeopleDeathNewCt:
+        displayName: People Death New Count
+        description: How many people perished due to disease since last report
+        type: number
+        required: false
+	
+    PeopleActiveCasesCt:
+        displayName: People Active Cases
+        description: Derived Confirmed-Recovered-Death
+        type: number
+        required: false
+	
+    DaysSinceLastRptCaseCt:
+        displayName: Days Since Last Reported Case Count
+        description: Derived Todays date - last prior report date with new cases > 0
+        type: number
+        required: false
+	
+    PeopleHospCurrentlyCt:
+        displayName: People Hospitalized Currently Count
+        description: How many people currently hospitalized
+        type: number
+        required: false
+	
+    PeopleHospCumlCt:
+        displayName: People Hospitalized Cumulative Count
+        description: How many people cumulative hospitalized
+        type: number
+        required: false
+	
+    PeopleInIntnsvCareCurrCt:
+        displayName: People In Intensive Care Currently Count
+        description: How many people hospitalized and in the ICU
+        type: number
+        required: false
+	
+    PeopleInIntnsvCareCumlCt:
+        displayName: People In Intensive Care Cumulative Count
+        description: How many people hospitalized and in the ICU
+        type: number
+        required: false
+	
+    PeopleIntubatedCurrentlyCt:
+        displayName: People Intubated Currently Count
+        description: How many people are currently intubated with ventilator
+        type: number
+        required: false
+	
+    PeopleIntubatedCumulativeCt:
+        displayName: People Intubated Cumulative Count
+        description: How many people are cumulative intubated with ventilator
+        type: number
+        required: false
+	
+    PeopleDischargedCt:
+        displayName: People Discharged Count
+        description: How many people are discharged
+        type: number
+        required: false
+	
+    ExpHospitalized16daysCt:
+        displayName: Expected Hospitalized 16days Count
+        description: Expected hospitalized in 16 days from refresh date
+        type: number
+        required: false
+	
+    ExpHospitalized32daysCt:
+        displayName: Expected Hospitalized 32days Count
+        description: Expected hospitalized in 32 days from refresh date
+        type: number
+        required: false
+	
+    ExpHospitalBedsLacking16DyCt:
+        displayName: Expected Hospital Beds Lacking 16 Days Count
+        description: Expected hospital beds lacking in 16 days from refresh date
+        type: number
+        required: false
+	
+    ExpHospitalBedsLacking32DyCt:
+        displayName: Expected Hospital Beds Lacking 32 Days Cnt
+        description: Expected hospital beds lacking in 32 days  from refresh date
+        type: number
+        required: false
+	
+    ExpPeopleHospitalizedMeanCt:
+        displayName: Expected People Hospitalized Mean Count
+        description: Mean value of total hospilizations from forecast model
+        type: number
+        required: false
+	
+    ExpPeopleDeathMeanCt:
+        displayName: ExpectedPeople Death Mean Count
+        description: Mean value of total deaths from forecast model
+        type: number
+        required: false
+	
+    ExpPeakHospitalizationDate:
+        displayName: Expected Peak Hospitalization Date
+        description: Date at which the peak number of total hospilizations are predicted
+        type: date-only
+        required: false
+	
+    ExpPeakDeathDate:
+        displayName: Expected Peak Death Date
+        description: Date at which the peak number of total deaths are predicted
+        type: date-only
+        required: false
+	
+    ExpHospitalShortfallDt:
+        displayName: Expected Hospital Shortfall Date
+        description: Date at which if there is a predicted shortfall will happen
+        type: date-only
+        required: false
+	
+    ExpPeakHospitlizationsShortfallCt:
+        displayName: Expected Peak Hospitlizations Shortfall Count
+        description: The highest total number of beds shortfall predicted
+        type: number
+        required: false
+	
+    ExpPeakBedNeedkHospitilizationDt:
+        displayName: Expected Peak Bed Need Hospitilization Date
+        description: Date at which the most number of hospilizations will be predicted
+        type: date-only
+        required: false
+	
+    COVID19PatientsCt:
+        displayName: COVID19 Patients Count
+        description: Patients currently hospitalized at inpatient care location who have suspected or confirmed COVID-19.
+        type: number
+        required: false
+	
+    COVID19ManualVentilatorPatientsCt:
+        displayName: COVID19 Manual Ventilator Patients Count
+        description: Patients hospitalized at inpatient care location who have suspected or confirmed COVID-19 and are on a mechanical ventilator.
+        type: number
+        required: false
+	
+    COVID19HospitalOnsetPatientsCt:
+        displayName: COVID19 Hospital Onset Patients Count
+        description: Patients hospitalized at inpatient care location with onset of suspected or confirmed COVID-19 14 or more days after hospitalization.
+        type: number
+        required: false
+	
+    COVID19OverlowPatientsCt:
+        displayName: COVID19 Overlow Patients Count
+        description: Patients with suspected or confirmed COVID-19 who are in the ED or any overflow location awaiting an inpatient bed.
+        type: number
+        required: false
+	
+    COVID19OverlowPatientsMechanicalVentilatorCt:
+        displayName: COVID19 Overlow Patients Mechanical Ventilator Count
+        description: Patients with suspected or confirmed COVID-19 who are in the ED or any overflow location awaiting an inpatient bed and on a mechanical ventilator.
+        type: number
+        required: false
+	
+    COVID19DeathCt:
+        displayName: COVID19 Death Count
+        description: Patients with suspected or confirmed COVID-19 who died in the hospital, ED, or any overflow location.
+        type: number
+        required: false
+	
+    COVIDLikeSymptomCount:
+        displayName: COVID Like Symptom Count
+        description: COVID Like symptom count
+        type: number
+        required: false
+	
+    AgeRangeId:
+        displayName: Age Range
+        description: What was the age range of people in the report
+        type: string
+        required: false
+	
+    GenderId:
+        displayName: Gender
+        description: What was the gender of people in the report
+        type: string
+        required: false
+	
+    IsReportingAllTests:
+        displayName: Is Reporting All Tests
+        description: What party submitted the report
+        type: boolean
+        required: false
+	
+    IsReportingAllPositiveTests:
+        displayName: Is Reporting All Positive Tests
+        description: Are positive tests regularly reported
+        type: boolean
+        required: false
+	
+    IsReportingAllNegativeTests:
+        displayName: Is Reporting All Negative Tests
+        description: Are negatie tests regularly reported
+        type: boolean
+        required: false
+	
+    DataTrustLevelId:
+        displayName: Data Trust Level
+        description: What is the level of quality of data submitted
+        type: string
+        required: true
+	
+    DataCompletenessScoreId:
+        displayName: Data Completeness Score
+        description: How complete is data overall e.g. grade A, B, C
+        type: string
+        required: true
+	
+    DataSourceNatureId:
+        displayName: Data Source Naure
+        description: What type of data source did the data come from
+        type: string
+        required: true
+	
+    ImplementerType:
+        displayName: Implementer Type
+        description: Entity Interfaces may have implementers other than the default implementation. Provides a way to specify which implementation, for example when an Insert operation should only be performed on one of several substrates that implement the EI.
+        type: string
+        required: false
+	
+    ExternalRecordId:
+        displayName: External Record Id
+        description: Corresponding record Id from external data source system
+        type: string
+        required: false
+	
+    ExternalSystemName:
+        displayName: External System Name
+        description: Name of the system where the External Record Id exists
+        type: string
+        required: false
+	
+    CreatedDate:
+        displayName: Created Date
+        description: Date and time when this record was created
+        type: datetime-only
+        required: true
+	
+    CreatedByUserId:
+        displayName: Created By User Id 
+        description: User who created the record
+        type: string
+        required: true
+	
+    LastModifiedDate:
+        displayName: Last Modified Date
+        description: Date and time when a user last modified this record
+        type: datetime-only
+        required: true
+	
+    LastModifiedById:
+        displayName: Last Modified By Id
+        description: User who most recently changed the record
+        type: string
+        required: true
+	
+    SystemModstamp:
+        displayName: System Modified Stamp
+        description: Date and time when this record was last modified by a user or by an automated process
+        type: datetime-only
+        required: true

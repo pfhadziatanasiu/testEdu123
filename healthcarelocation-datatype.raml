@@ -1,0 +1,135 @@
+#%RAML 1.0 DataType
+type: object
+properties:
+	
+    LocationId:
+        displayName: Location ID
+        description: Reference to the Location where outbreak taken place
+        type: string
+        required: false
+	
+    Description:
+        displayName: Description
+        description: Description of the Healthcare Facility
+        type: string
+        required: false
+	
+    IsUrgentCare :
+        displayName: Is Urgent Care 
+        description: If the Healthcare Location is an Urgent Care facility
+        type: boolean
+        required: false
+	
+    IsWalkInAllowed:
+        displayName: Is Walk In Allowed
+        description: If the Healthcare Location has walk in allowed option
+        type: boolean
+        required: false
+	
+    IsPrimaryLocation:
+        displayName: Is Primary Location
+        description: If the Healthcare Location is the primary location of the Helthcare Provider Organization.
+        type: boolean
+        required: false
+	
+    LicensedBedCt:
+        displayName: Licensed Bed Count
+        description: Total number of licensed bed count
+        type: number
+        required: false
+	
+    IsHandicapAccessible:
+        displayName: Is Handicap Accessible
+        description: If the Healthcare Location accessible for handicap.
+        type: boolean
+        required: false
+	
+    EffectiveStartDt:
+        displayName: Effective Start Date
+        description: Start of the of Location 
+        type: date-only
+        required: false
+	
+    AccountId:
+        displayName: Account ID
+        description: Reference to the Account that is the Provider organization 
+        type: string
+        required: false
+	
+    HealthcareLocationStatusName:
+        displayName: Healthcare Location Status
+        description: Status of the Healthcare location e.g. active | suspended | inactive
+        type: string
+        required: false
+	
+    OperationalStatusName:
+        displayName: Operational Status
+        description: The operational status of the location (typically only for a bed/room)
+        type: string
+        required: false
+	
+    HealthcareLocationTypeName:
+        displayName:  Healthcare Location Type
+        description: Type of healthcare location e.g. Emergercy, Urgent Care, Out patient etc
+        type: string
+        required: false
+	
+    ServiceTypeName:
+        displayName: Service Type
+        description: Service type of a medical facility e.g. Primary, Secondary and Tertiary
+        type: string
+        required: false
+	
+    FacilityAddr:
+        displayName: Facility Address
+        description: Reference to the Address of Healthcare Facility where outbreak taken place
+        type: string
+        required: false
+	
+    ImplementerType:
+        displayName: Implementer Type
+        description: Entity Interfaces may have implementers other than the default implementation. Provides a way to specify which implementation, for example when an Insert operation should only be performed on one of several substrates that implement the EI.
+        type: string
+        required: false
+	
+    ExternalRecordId:
+        displayName: External Record Id
+        description: Corresponding record Id from external data source system
+        type: string
+        required: false
+	
+    ExternalSystemName:
+        displayName: External System Name
+        description: Name of the system where the External Record Id exists
+        type: string
+        required: false
+	
+    CreatedDate:
+        displayName: Created Date
+        description: Date and time when this record was created
+        type: datetime-only
+        required: true
+	
+    CreatedByUserId:
+        displayName: Created By User Id 
+        description: User who created the record
+        type: string
+        required: true
+	
+    LastModifiedDate:
+        displayName: Last Modified Date
+        description: Date and time when a user last modified this record
+        type: datetime-only
+        required: true
+	
+    LastModifiedById:
+        displayName: Last Modified By Id
+        description: User who most recently changed the record
+        type: string
+        required: true
+	
+    SystemModstamp:
+        displayName: System Modified Stamp
+        description: Date and time when this record was last modified by a user or by an automated process
+        type: datetime-only
+        required: true

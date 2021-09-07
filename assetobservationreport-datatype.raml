@@ -1,0 +1,273 @@
+#%RAML 1.0 DataType
+type: object
+properties:
+	
+    Id:
+        displayName: Asset Observation Report Id
+        description: Primary Key
+        type: string
+        required: true
+	
+    AccountId:
+        displayName: Account Id
+        description: Reference to the account for the provider record submitting the report
+        type: string
+        required: false
+	
+    LocationId:
+        displayName: Location Id
+        description: Reference to the location where the supplier are at
+        type: string
+        required: false
+	
+    HealthcareProviderId:
+        displayName: HealthcareProviderId
+        description: Reference to details about the account when it is a Healthcare Provider
+        type: string
+        required: false
+	
+    ReportedDateTm:
+        displayName: Reported Date Time
+        description: Date ofor which equipment counts are reported
+        type: datetime-only
+        required: true
+	
+    TotalBedCount:
+        displayName: Total Bed Count
+        description: Total number of all Inpatient and outpatient beds, including all staffed,ICU, licensed, and overflow(surge) beds used for inpatients or outpatients at location.
+        type: number
+        required: false
+	
+    TotalBedAvailable:
+        displayName: Total Bed Available
+        description: Total number of all Inpatient and outpatient beds, including all staffed,ICU, licensed, and overflow(surge) beds not used/available for inpatients or outpatients at location.
+        type: number
+        required: false
+	
+    TotalBedInactiveCt:
+        displayName: Total Bed Inactive
+        description: Total number of all Inpatient and outpatient beds, including all staffed,ICU, licensed, and overflow(surge) beds not ready for use yet for inpatients or outpatients at location.
+        type: number
+        required: false
+	
+    InpatientBedsCt:
+        displayName: Inpatient Beds Count
+        description: Inpatient beds, including all staffed, licensed, and overflow(surge) beds used for inpatients at location.
+        type: number
+        required: false
+	
+    InpatientBedsOccupiedCt:
+        displayName: Inpatient Beds Occupied Count
+        description: Total number of staffed inpatient beds that are occupied at location.
+        type: number
+        required: false
+	
+    ICUBedsCt:
+        displayName: ICU Beds Count
+        description: Total number of staffed inpatient intensive care unit (ICU) beds at location.
+        type: number
+        required: false
+	
+    ICUBedsOccupiedCt:
+        displayName: ICU Beds Occupied Count
+        description: Total number of staffed inpatient ICU beds that are occupied at location
+        type: number
+        required: false
+	
+    VentilatorsCt:
+        displayName: Ventilators Count
+        description:  Total number of mechanical ventilators available at location
+        type: number
+        required: false
+	
+    VentilatorsOccupiedCt:
+        displayName: Ventilators Occupided Count
+        description: Total number of mechanical ventilators in use at location.
+        type: number
+        required: false
+	
+    AnaesthesiaMachineCt:
+        displayName: Anaesthesia Machine Count
+        description: Number of Anaesthesia Machines available in healthcare location.
+        type: number
+        required: false
+	
+    N95MaskCt:
+        displayName: N95 Mask Count
+        description: Number of N95 Masks available in healthcare location.
+        type: number
+        required: false
+	
+    FaceShieldCt:
+        displayName: Face Shield Count
+        description: Number of Face Shields available in healthcare location.
+        type: number
+        required: false
+	
+    HoodCt:
+        displayName: Hood Count
+        description: Number of Hoods available in healthcare location.
+        type: number
+        required: false
+	
+    Level3GownCt:
+        displayName: Level 3 Gown Count
+        description: Number of Level 3 Gowns available in healthcare location.
+        type: number
+        required: false
+	
+    Level4GownCt:
+        displayName: Level 4 Gown Count
+        description: Number of Level 4 Gowns available in healthcare location.
+        type: number
+        required: false
+	
+    CoverallCt:
+        displayName: Coverall Count
+        description: Number of Coveralls available in healthcare location.
+        type: number
+        required: false
+	
+    SurgicalGownCt:
+        displayName: Surgical Gown Count
+        description: Number of Surgical Gowns available in healthcare location.
+        type: number
+        required: false
+	
+    FitTestCt:
+        displayName: Fit Test Count
+        description: Number of Fit Tests available in healthcare location.
+        type: number
+        required: false
+	
+    SurgicalMaskCt:
+        displayName: Surgical Mask Count
+        description: Number of Surgical Masks available in healthcare location.
+        type: number
+        required: false
+	
+    ExamMaskCt:
+        displayName: Exam Mask Count
+        description: Number of Exam Masks available in healthcare location.
+        type: number
+        required: false
+	
+    NitrileGloveCt:
+        displayName: Nitrile Glove Count
+        description: Number of Nitrile Gloves available in healthcare location.
+        type: number
+        required: false
+	
+    SterileGloveCt:
+        displayName: Sterile Glove Count
+        description: Number of Sterile Gloves available in healthcare location.
+        type: number
+        required: false
+	
+    HandSanitizerCt:
+        displayName: Hand Sanitizer Count
+        description: Number of Hand Sanitizers available in healthcare location.
+        type: number
+        required: false
+	
+    DisinfectantCt:
+        displayName: Disinfectant Count
+        description: Number of Disinfectants available in healthcare location.
+        type: number
+        required: false
+	
+    SafetyGoggleCt:
+        displayName: Safety Goggle Count
+        description: Number of Safety Goggles available in healthcare location.
+        type: number
+        required: false
+	
+    SafetyGlassesCt:
+        displayName: Safety Glasses Count
+        description: Number of Safety Glasses available in healthcare location.
+        type: number
+        required: false
+	
+    ShoeCoverCt:
+        displayName: Shoe Cover Count
+        description: Number of Shoe Cover available in healthcare location.
+        type: number
+        required: false
+	
+    AgeRangeNbr:
+        displayName: Age Range
+        description: Reference to the Age Range of Disease Outbreak subject area
+        type: string
+        required: false
+	
+    PresumptiveCOVIDCt:
+        displayName: Presumptive COVID Count
+        description: Presumptive COVID count
+        type: number
+        required: false
+	
+    COVIDPositiveCt:
+        displayName: COVID Positive Count
+        description: COVID Positive Count
+        type: number
+        required: false
+	
+    ComorbidityCt:
+        displayName: Comorbidity Count
+        description: Comorbidity Count
+        type: number
+        required: false
+	
+    HealthCareStaffCOVIDPositiveCt:
+        displayName: Health Care Staff COVID Positive Count
+        description: Health Care Staff COVID Positive Count
+        type: number
+        required: false
+	
+    ImplementerType:
+        displayName: Implementer Type
+        description: Entity Interfaces may have implementers other than the default implementation. Provides a way to specify which implementation, for example when an Insert operation should only be performed on one of several substrates that implement the EI.
+        type: string
+        required: false
+	
+    ExternalRecordId:
+        displayName: External Record Id
+        description: Corresponding record Id from external data source system
+        type: string
+        required: false
+	
+    ExternalSystemName:
+        displayName: External System Name
+        description: Name of the system where the External Record Id exists
+        type: string
+        required: false
+	
+    CreatedDate:
+        displayName: Created Date
+        description: Date and time when this record was created
+        type: datetime-only
+        required: true
+	
+    CreatedByUserId:
+        displayName: Created By User Id 
+        description: User who created the record
+        type: string
+        required: true
+	
+    LastModifiedDate:
+        displayName: Last Modified Date
+        description: Date and time when a user last modified this record
+        type: datetime-only
+        required: true
+	
+    LastModifiedById:
+        displayName: Last Modified By Id
+        description: User who most recently changed the record
+        type: string
+        required: true
+	
+    SystemModstamp:
+        displayName: System Modified Stamp
+        description: Date and time when this record was last modified by a user or by an automated process
+        type: datetime-only
+        required: true
